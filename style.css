@@ -53,7 +53,7 @@ h1 a:hover {
     width: 40%; 
     height: 40%; 
     max-width: 300px;
-    background-color: #000000;
+    /* background-color: #000000; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,6 +77,59 @@ h1 a:hover {
     font-family: "Lato", sans-serif;
 }
 
+.work-row {
+    display: flex;
+}
+
+.work:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.work-box {
+    position: relative;
+    flex: 500%;
+    height: 20vw;
+    margin: 0 2% 2% 0;
+    /* background-color: #000000; */
+}
+
+.work-box.banner {
+    position: relative;
+    flex: 500%;
+    height: 9vw;
+    margin: 0 2% 2% 0;
+    /* background-color: #000000; */
+}
+
+.work-box img {
+    height: 95%;
+    width: 98%;
+    margin: 1% 1% 1% 1%;
+    object-fit: cover;
+}
+
+.work-box .label {
+    font-family: "Josefin Sans";
+    color: white;
+    position: absolute;
+    font-size: 5vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 7%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* TODO: do image - text and then text - image on two columns */
+
+.work-image img {
+    width: 50%; 
+    margin: 20px;
+    max-width: 512px;
+}
+
 /* for mobile displays */
 @media(max-width: 1000px) {
     h1 {
@@ -87,7 +140,7 @@ h1 a:hover {
         background-color: var(--color-bg);
         margin-top: 50px;
         margin-bottom: 50px;
-        width: 90%;
+        width: 94%;
         min-height: 400px;
         border: 0px;
         border-spacing: 0px;
@@ -98,6 +151,18 @@ h1 a:hover {
 
     .about-content {
         font-size: medium;
+    }
+
+    .work-box {
+        height: 30vw;
+    }
+
+    .work-box.banner {
+        height: 12vw;
+    }
+
+    .work-box .label {
+        font-size: 7.5vw;
     }
 }
 
