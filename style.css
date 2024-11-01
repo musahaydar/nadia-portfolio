@@ -183,15 +183,15 @@ iframe {
 /* for mobile displays */
 @media(max-width: 1300px) {
     h1 {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
     
     .body-content {
-        width: 70%;
+        width: 60%;
     }
     
     .work-box {
-        height: 26vw;
+        height: 22vw;
     }
     
     .work-box.banner {
@@ -199,7 +199,7 @@ iframe {
     }
     
     .work-box .label {
-        font-size: 5vw;
+        font-size: 4.25vw;
     }
     
     .about {
@@ -215,11 +215,11 @@ iframe {
     .body-content {
         width: 87%;
     }
-    
+
     .work-box {
         height: 30vw;
     }
-    
+
     .work-box .label {
         font-size: 6.5vw;
     }
