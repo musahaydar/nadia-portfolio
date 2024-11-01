@@ -1,11 +1,15 @@
 :root {
-    --color-bg: #ffffff;
+    --color-bg: #fcf4f4;
     --color-body: #ffffff;
+    --color-headers: #ba4848;
+    --color-borders: #fef7f7;
     --color-text: #000000;
 }
 
 body {
     background-color: var(--color-bg);
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 a {
@@ -14,14 +18,28 @@ a {
 }
 
 h1 {
+    /* text-shadow: -1px -1px 0 #7b0f0f, 1px -1px 0 #7b0f0f, -1px 1px 0 #7b0f0f, 1px 1px 0 #7b0f0f; */
+    /* background-color: var(--color-borders); */
     font-family: "Josefin Sans";
-    color: var(--color-text);
+    color: var(--color-headers);
     margin: 5x 0 0 0;
     contain: layout;
 }
 
+h3 {
+    margin-bottom: 0.2em;
+}
+
+h4 {
+    margin: 0;
+    color: #a7a7a7;
+    font-weight: normal;
+}
+
 h1 a {
+    /* background-color: var(--color-borders); */
     float: right;
+    color: var(--color-headers);
     text-decoration: none;
     padding: 0 2% 0 0;
 }
@@ -36,24 +54,29 @@ h1 a:hover {
     text-decoration: underline;
 }
 
+li { 
+    margin-bottom: 0.5em;  
+ }
+
 .body-content {
     background-color: var(--color-body);
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 60%;
+    width: 50%;
     min-height: 400px;
     border: 0px;
     border-spacing: 0px;
     margin-right: auto;
     margin-left: auto;
     padding: 2.5%;
+    display: flow-root;
 }
 
 .profile-photo {
     width: 40%; 
     height: 40%; 
-    max-width: 300px;
-    background-color: #000000;
+    max-width: 350px;
+    /* background-color: var(--color-borders);; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,45 +87,156 @@ h1 a:hover {
 .profile-photo img {
     height: 80%;
     width: 97.5%;
-    max-width: 300px;
+    max-width: 350px;
     margin: 1% 0 1% 0;
 }
 
 .about {
     color: var(--color-text);
-    font-size: large;
+    font-size: 14pt;
 }
 
 .about-content {
     font-family: "Lato", sans-serif;
 }
 
+.work-row {
+    display: flex;
+}
+
+.work:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.work-box {
+    position: relative;
+    flex: 500%;
+    height: 18vw;
+    margin: 0 2% 2% 0;
+    max-height: 320px;
+    /* background-color: #000000; */
+}
+
+.work-box.banner {
+    position: relative;
+    flex: 500%;
+    height: 6vw;
+    max-height: 115px;
+    margin: 0 2% 2% 0;
+    /* background-color: #000000; */
+}
+
+.work-box img {
+    height: 95%;
+    width: 98%;
+    /* margin: 1% 1% 1% 1%; */
+    object-fit: cover;
+}
+
+.work-box .label {
+    font-family: "Josefin Sans";
+    /* color: var(--color-headers); */
+    color: #ffffff;
+    position: absolute;
+    font-size: min(3.5vw, 48pt);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    word-spacing: -0.3ch;
+    text-shadow: -1px -1px 0 var(--color-headers), 1px -1px 0 var(--color-headers), -1px 1px 0 var(--color-headers), 1px 1px 0 var(--color-headers);
+    /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; */
+}
+
+.work-image {
+    padding: 20px;
+}
+
+.work-image img {
+    display: block;
+    width: 100%; 
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-container {
+    color: var(--color-text);
+    font-size: 14pt;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.iframe-container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+}
+
 /* for mobile displays */
-@media(max-width: 1000px) {
+@media(max-width: 1300px) {
     h1 {
-        font-size: 4vw;
+        font-size: 3vw;
     }
-
+    
     .body-content {
-        background-color: var(--color-bg);
-        margin-top: 50px;
-        margin-bottom: 50px;
-        width: 90%;
-        min-height: 400px;
-        border: 0px;
-        border-spacing: 0px;
-        margin-right: auto;
-        margin-left: auto;
-        padding: 2.5%;
+        width: 60%;
     }
-
-    .about-content {
-        font-size: medium;
+    
+    .work-box {
+        height: 22vw;
+    }
+    
+    .work-box.banner {
+        height: 9vw;
+    }
+    
+    .work-box .label {
+        font-size: 4.25vw;
+    }
+    
+    .about {
+        font-size: 14pt;
     }
 }
 
 @media(max-width: 786px) {
     h1 {
         font-size: 5vw;
+    }
+    
+    .body-content {
+        width: 87%;
+    }
+
+    .work-box {
+        height: 30vw;
+    }
+
+    .work-box .label {
+        font-size: 6.5vw;
+    }
+    
+    .work-box.banner {
+        height: 12vw;
+    }
+    
+    .about {
+        font-size: 12pt;
+    }
+    
+    .col-container {
+        grid-template-columns: 1fr;
+    }
+
+    .iframe-container {
+        width: 90%;
     }
 }
