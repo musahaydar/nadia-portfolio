@@ -26,12 +26,12 @@ h1 {
     contain: layout;
 }
 
-h3 {
+h2 {
     margin-bottom: 0.2em;
 }
 
 h4 {
-    margin: 0;
+    margin: 0 0 0.2em 0;
     color: #a7a7a7;
     font-weight: normal;
 }
@@ -47,6 +47,12 @@ h1 a {
 .current {
     float: right;
     text-decoration: underline;
+    padding: 0 2% 0 0;
+}
+
+.title {
+    float: left;
+    text-decoration: none;
     padding: 0 2% 0 0;
 }
 
@@ -107,7 +113,7 @@ li {
 
 .about {
     color: var(--color-text);
-    font-size: 14pt;
+    font-size: 13pt;
 }
 
 .about-content {
@@ -147,6 +153,7 @@ li {
     width: 98%;
     /* margin: 1% 1% 1% 1%; */
     object-fit: cover;
+    filter: brightness(75%);
 }
 
 .work-box .label {
@@ -166,26 +173,42 @@ li {
 
 .work-image {
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .work-image img {
     display: block;
     width: 100%; 
     max-width: 512px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .col-container {
     color: var(--color-text);
-    font-size: 14pt;
+    font-size: 13pt;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.iframe-container {
+.col-container-2 {
+    color: var(--color-text);
+    font-size: 13pt;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.col-container-2 .iframe-container {
     margin: 0 auto;
     width: 60%;
+}
+
+.iframe-container {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 iframe {
@@ -217,11 +240,11 @@ iframe {
     }
     
     .about {
-        font-size: 14pt;
+        font-size: 12pt;
     }
 }
 
-@media(max-width: 786px) {
+@media(max-width: 900px) {
     h1 {
         font-size: 5vw;
     }
@@ -251,6 +274,10 @@ iframe {
     }
     
     .iframe-container {
+        width: 90%;
+    }
+
+    .col-container-2 .iframe-container {
         width: 90%;
     }
 }
