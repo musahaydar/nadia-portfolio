@@ -78,6 +78,20 @@ li {
     display: flow-root;
 }
 
+.body-content-work {
+    background-color: var(--color-body);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    min-height: 400px;
+    border: 0px;
+    border-spacing: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2.5%;
+    display: flow-root;
+}
+
 .profile-photo {
     width: 40%; 
     height: 40%; 
@@ -234,6 +248,10 @@ iframe {
     }
     
     .body-content {
+        width: 60%;
+    }
+
+    .body-content-work {
         width: 70%;
     }
     
@@ -254,12 +272,16 @@ iframe {
     }
 }
 
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
     h1 {
         font-size: 5vw;
     }
     
     .body-content {
+        width: 87%;
+    }
+
+    .body-content-work {
         width: 87%;
     }
     
