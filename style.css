@@ -184,6 +184,11 @@ li {
     margin: auto;
 }
 
+.work-text {
+    padding: 20px;
+    font-family: "Lato", sans-serif;
+}
+
 .col-container {
     color: var(--color-text);
     font-size: 13pt;
@@ -217,14 +222,19 @@ iframe {
     width: 100%;
 }
 
+.audio {
+    display: flex;
+    justify-content: center;
+}
+
 /* for mobile displays */
-@media(max-width: 1300px) {
+@media(max-width: 1500px) {
     h1 {
         font-size: 3vw;
     }
     
     .body-content {
-        width: 60%;
+        width: 70%;
     }
     
     .work-box {
