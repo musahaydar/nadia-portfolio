@@ -20,7 +20,7 @@ a {
 h1 {
     /* text-shadow: -1px -1px 0 #7b0f0f, 1px -1px 0 #7b0f0f, -1px 1px 0 #7b0f0f, 1px 1px 0 #7b0f0f; */
     /* background-color: var(--color-borders); */
-    font-family: "Josefin Sans";
+    font-family: "Marcellus", serif;
     color: var(--color-headers);
     margin: 5x 0 0 0;
     contain: layout;
@@ -131,7 +131,8 @@ clear: both;
 }
 
 .about-content {
-    font-family: "Lato", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 370;
 }
 
 .work-row {
@@ -167,12 +168,12 @@ clear: both;
     width: 98%;
     /* margin: 1% 1% 1% 1%; */
     object-fit: cover;
-    filter: brightness(75%);
+    filter: brightness(60%);
 }
 
 .work-box .label {
-    font-family: "Josefin Sans";
-    /* color: var(--color-headers); */
+    font-family:  "Marcellus", serif;
+    /* color: var(--color-labels); */
     color: #ffffff;
     position: absolute;
     font-size: min(3.5vw, 48pt);
@@ -200,19 +201,20 @@ clear: both;
 
 .work-text {
     padding: 20px;
-    font-family: "Lato", sans-serif;
+    font-family: "Montserrat", serif;
+    font-weight: 370;
 }
 
 .col-container {
     color: var(--color-text);
-    font-size: 13pt;
+    font-size: 12pt;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .col-container-2 {
     color: var(--color-text);
-    font-size: 13pt;
+    font-size: 12pt;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 }
