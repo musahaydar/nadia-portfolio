@@ -127,7 +127,7 @@ clear: both;
 
 .about {
     color: var(--color-text);
-    font-size: 13pt;
+    font-size: 12pt;
 }
 
 .about-content {
@@ -168,13 +168,13 @@ clear: both;
     width: 98%;
     /* margin: 1% 1% 1% 1%; */
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(50%);
 }
 
 .work-box .label {
     font-family:  "Marcellus", serif;
     /* color: var(--color-labels); */
-    color: #ffffff;
+    color: #fcf4f4;
     position: absolute;
     font-size: min(3.5vw, 48pt);
     top: 50%;
@@ -293,7 +293,7 @@ iframe {
 
 @media(max-width: 1000px) {
     h1 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
     
     .body-content {
