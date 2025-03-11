@@ -169,6 +169,11 @@ clear: both;
     /* margin: 1% 1% 1% 1%; */
     object-fit: cover;
     filter: brightness(50%);
+    border-radius: 1.5%;
+}
+
+.work-button:hover {
+    transform: scale(1.025);
 }
 
 .work-box .label {
