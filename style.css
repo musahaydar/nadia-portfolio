@@ -173,7 +173,7 @@ clear: both;
 }
 
 .work-button:hover {
-    transform: scale(1.025);
+    transform: scale(1.04);
 }
 
 .work-box .label {
@@ -259,6 +259,20 @@ iframe {
     height: auto;
     padding-right: 8px;
     padding-bottom: 8px;
+}
+
+.gallery .wide:hover {
+    border: 6px solid #ffffff;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    transform: scale(1.8);
+}
+
+.gallery .tall:hover {
+    border: 6px solid #ffffff;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    transform: scale(1.4);
 }
 
 /* for mobile displays */
